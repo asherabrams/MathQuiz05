@@ -320,6 +320,7 @@
             this.startButton.TabIndex = 1;
             this.startButton.Text = "START QUIZ";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // Form1
             // 
