@@ -16,6 +16,9 @@ namespace MathQuiz05
         int addend1;
         int addend2;
 
+
+        int timeLeft;
+
         public void StartTheQuiz()
         {
             addend1 = randomizer.Next(51);
@@ -25,6 +28,10 @@ namespace MathQuiz05
             plusRightLabel.Text = addend2.ToString();
 
             sum.Value = 0;
+
+            timeLeft = 30;
+            timeLabel.Text = "30 SECONDS";
+            timer1.Start();
         }
 
 
@@ -37,6 +44,23 @@ namespace MathQuiz05
         {
             StartTheQuiz();
             startButton.Enabled = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (timeLeft > 0)
+            {
+                timeLeft = timeLeft - 1;
+                timeLabel.Text = timeLeft + " seconds";
+            }
+            else
+            {
+                timer1.Stop();
+                timeLabel.Text = "TIME!";
+                MessageBox.Show("OUT OF TIME");
+                sum.Value = addend1 + addend2;
+                startButton.Enabled = true;
+            }
         }
     }
 }
