@@ -280,6 +280,7 @@
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(351, 98);
             this.sum.TabIndex = 2;
+            this.sum.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // difference
             // 
@@ -288,6 +289,7 @@
             this.difference.Name = "difference";
             this.difference.Size = new System.Drawing.Size(351, 98);
             this.difference.TabIndex = 3;
+            this.difference.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // product
             // 
@@ -296,6 +298,7 @@
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(351, 98);
             this.product.TabIndex = 4;
+            this.product.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // quotient
             // 
@@ -304,6 +307,7 @@
             this.quotient.Name = "quotient";
             this.quotient.Size = new System.Drawing.Size(351, 98);
             this.quotient.TabIndex = 5;
+            this.quotient.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // square
             // 
@@ -312,6 +316,7 @@
             this.square.Name = "square";
             this.square.Size = new System.Drawing.Size(351, 98);
             this.square.TabIndex = 6;
+            this.square.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // startButton
             // 
@@ -333,6 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2080, 898);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.square);
