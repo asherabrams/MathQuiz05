@@ -21,6 +21,7 @@ namespace MathQuiz05
         int multiplier;
         int dividend;
         int divisor;
+        int root;
 
         int timeLeft;
 
@@ -50,6 +51,10 @@ namespace MathQuiz05
             dividedLeftLabel.Text = dividend.ToString();
             dividedRightLabel.Text = divisor.ToString();
             quotient.Value = 0;
+
+            root = randomizer.Next(2, 11);
+            squaredLabel.Text = root.ToString();
+            square.Value = 0;
 
             timeLeft = 30;
             timeLabel.Text = "30 SECONDS";
@@ -91,6 +96,7 @@ namespace MathQuiz05
                 difference.Value = minuend - subtrahend;
                 product.Value = multiplicand * multiplier;
                 quotient.Value = dividend / divisor;
+                square.Value = root * root;
                 startButton.Enabled = true;
             }
         }
@@ -100,7 +106,8 @@ namespace MathQuiz05
             if ((addend1 + addend2 == sum.Value)
                 && (minuend - subtrahend == difference.Value)
                 && (multiplicand * multiplier == product.Value)
-                && (dividend / divisor == quotient.Value))
+                && (dividend / divisor == quotient.Value)
+                && (root * root == square.Value))
                 return true;
             else
                 return false;
