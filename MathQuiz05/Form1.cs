@@ -52,8 +52,9 @@ namespace MathQuiz05
             dividedRightLabel.Text = divisor.ToString();
             quotient.Value = 0;
 
-            root = randomizer.Next(2, 11);
+            root = randomizer.Next(2, 41);
             squaredLabel.Text = root.ToString();
+            square.Maximum = 9999;
             square.Value = 0;
 
             timeLeft = 30;
